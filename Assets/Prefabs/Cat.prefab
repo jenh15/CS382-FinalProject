@@ -219,15 +219,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.77
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -268,3 +268,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
   m_PrefabInstance: {fileID: 2630985559684912937}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2900963284150561400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
+  m_PrefabInstance: {fileID: 2630985559684912937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &8554500445456240850
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900963284150561400}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2123107181606168211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900963284150561400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66b4271f5bb0a54c9d636ecdfb57cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid: {fileID: 0}
