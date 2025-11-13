@@ -5,25 +5,18 @@ using UnityEngine.Events;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject catPrefab;
-    //public Transform MuzzleFlash;
     public Transform Spawn;
-    /*  public AudioSource Shot;
-     public AudioSource noAmmo;
-     public Transform muzzleSpawn;
-     public Animation reload; */
-    public float velocity = 50;
-    static public Transform PROJECTILE_ANCHOR;
+    public float velocity = 1;
+
+    private Camera cam;
+    [SerializeField]
+    private CatProjectile projectilePrefab;
 
     //public int overallAmmo;
 
     void Start()
     {
-        if (PROJECTILE_ANCHOR == null)
-        {
-            GameObject go = new GameObject("_ProjectleAnchor");
-            PROJECTILE_ANCHOR = go.transform;
-        }
+        cam = Camera.main;
     }
     void Update()
     {
@@ -32,21 +25,35 @@ public class Gun : MonoBehaviour
             Reload();
         } */
 
+        //AimGun();
+
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            var position = Spawn.position;
+            var rotation = Spawn.rotation;
+            var projectile = Instantiate(projectilePrefab, position, rotation);
+
+            projectile.Shoot(velocity, transform.right * -1);
         }
     }
-    void Shoot()
+
+    /* void AimGun()
+    {
+    
+    } */
+    
+    
+/*     void Shoot()
     {
         GameObject go;
-        go = Instantiate<GameObject>(catPrefab, PROJECTILE_ANCHOR);
+        go = Instantiate<GameObject>(catPrefab);
         CatProjectile p = go.GetComponent<CatProjectile>();
 
         Vector3 vel = Vector3.right * velocity;
-        Vector3 aimPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        aimPos.z = 0;
+        Vector3 aimPos = Camera.main.ScreenToWorldPoint(Spawn.position);
+        aimPos.x = 0;
         p.transform.position = aimPos;
         p.vel = vel;
-    }
+        p.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (velocity, 0, 0));
+    } */
 }
