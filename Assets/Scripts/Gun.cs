@@ -31,11 +31,14 @@ public class Gun : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            
             var position = Spawn.position;
             var rotation = Spawn.rotation;
             var projectile = Instantiate(projectilePrefab, position, rotation);
+            Vector3 shootDir = ray.direction.normalized;
 
-            projectile.Shoot(velocity, transform.right * -1);
+            projectile.Shoot(velocity, shootDir);
         }
     }
 
