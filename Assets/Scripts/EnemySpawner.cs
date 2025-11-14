@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
     
     public float spawnInterval = 2f;
+    public Vector3 spawnRange;
 
     void Start()
     {
@@ -13,7 +14,14 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
+        int ndx = Random.Range(0, enemyPrefab.Length);
+        GameObject go = Instantiate<GameObject>(enemyPrefab[ndx]);
+
+        spawnRange = new Vector3 (13, -10, Random.Range(-4, 4));
+
         // Spawn enemy at the spawner's position, with default rotation
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        Instantiate(go, spawnRange, Quaternion.identity);
     }
 }
+
+// 13, -10, (-6 to 6)
