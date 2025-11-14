@@ -4,28 +4,22 @@ using UnityEngine;
 
 public class Rat : MonoBehaviour
 {
-    [SerializeField] private float StartingHealth;
-    private float health;
-    public float Health
+    [SerializeField]
+    private float health = 5f;
+
+    private void OnCollisionEnter (Collision coll)
     {
-        get
+        CatProjectile projectile = coll.gameObject.GetComponent<CatProjectile>();
+
+        if (projectile != null)
         {
-            return health;
-        }
-        set
-        {
-            health = value;
-            Debug.Log(health);
-            if (health <= 0f)
+            Debug.Log("Rat hit by CatProjectile" + coll.collider.name);
+            health--;
+
+            if (health <= 0)
             {
                 Destroy(gameObject);
             }
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Health = StartingHealth;
     }
 }

@@ -42,8 +42,12 @@ public class CatProjectile : MonoBehaviour
 
     private void OnCollisionEnter (Collision coll)
     {
-        //GameObject otherGO = coll.gameObject;
-        if (coll.gameObject.CompareTag("Ground"))   // If the cat hits the ground, it is destroyed
+
+        if (coll.gameObject.CompareTag("Rat"))
+        {
+            Debug.Log("Cat hit Rat");
+            Destroy(gameObject);
+        } else if (coll.gameObject.CompareTag("Ground"))   // If the cat hits the ground, it is destroyed
         {
             Destroy(gameObject);
         }
