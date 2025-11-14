@@ -28,5 +28,10 @@ public class EnemyAI : MonoBehaviour
 
         // Move forward in facing direction
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
+
+        if (this.transform.position.x <= 0)     // Rats are deleted if they go past the camera (change later)
+        {
+            Destroy(gameObject);
+        }
     }
 }

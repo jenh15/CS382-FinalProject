@@ -32,7 +32,21 @@ public class CatProjectile : MonoBehaviour
 
     public void Shoot(float velocity, Vector3 direction)
     {
-        vel = direction * velocity;
+        transform.rotation = Quaternion.LookRotation(direction);
+
+        rigid.velocity = Vector3.zero;
+        rigid.angularVelocity = Vector3.zero;
+
+        rigid.AddForce(direction * velocity, ForceMode.VelocityChange);
+    }
+
+    private void OnCollisionEnter (Collision coll)
+    {
+        //GameObject otherGO = coll.gameObject;
+        if (coll.gameObject.CompareTag("Ground"))   // If the cat hits the ground, it is destroyed
+        {
+            Destroy(gameObject);
+        }
     }
     
     public Vector3 vel

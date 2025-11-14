@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4465102199098852774}
   - component: {fileID: 1493540286991736012}
   - component: {fileID: 6000445693353755947}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 6243995955940217273}
   - component: {fileID: 4988559938786871655}
   - component: {fileID: 2009625880079826379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,6 +260,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
       propertyPath: m_Name
       value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
+      propertyPath: m_TagString
+      value: CatProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d41f57bb937d1d045bd1a1d1de1b04dc, type: 3}

@@ -8,7 +8,9 @@ public class Gun : MonoBehaviour
     public Transform Spawn;
     public float velocity = 1;
 
+    [SerializeField]
     private Camera cam;
+
     [SerializeField]
     private CatProjectile projectilePrefab;
 
@@ -20,12 +22,12 @@ public class Gun : MonoBehaviour
     }
     void Update()
     {
+        AimGun();
+
         /* if (Input.GetKeyDown(KeyCode.R))
         {
             Reload();
         } */
-
-        //AimGun();
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -37,23 +39,12 @@ public class Gun : MonoBehaviour
         }
     }
 
-    /* void AimGun()
+    void AimGun()
     {
-    
-    } */
-    
-    
-/*     void Shoot()
-    {
-        GameObject go;
-        go = Instantiate<GameObject>(catPrefab);
-        CatProjectile p = go.GetComponent<CatProjectile>();
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);    // Get mouse position
 
-        Vector3 vel = Vector3.right * velocity;
-        Vector3 aimPos = Camera.main.ScreenToWorldPoint(Spawn.position);
-        aimPos.x = 0;
-        p.transform.position = aimPos;
-        p.vel = vel;
-        p.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (velocity, 0, 0));
-    } */
+        Vector3 adjustedDirection = Quaternion.Euler(0, 90, 0) * ray.direction; // Adjust the direction because I made the game have funky axises
+
+        transform.rotation = Quaternion.LookRotation(adjustedDirection, Vector3.up);    // Rotate the gun to look towards the mouse
+    }
 }
