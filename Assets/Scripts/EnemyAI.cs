@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
         // Get direction toward the player, but ignore vertical difference
         Vector3 direction = (target.position - transform.position).normalized;
         direction.y = 0f; // Prevent up/down movement
-        direction.z = 0f; // prevent side to side
+        direction.Normalize();
 
         // Rotate toward player
         if (direction != Vector3.zero)
