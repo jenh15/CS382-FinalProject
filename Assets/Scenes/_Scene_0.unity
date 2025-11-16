@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.058647744, g: 0.061128017, b: 0.07683402, a: 1}
+  m_IndirectSpecularColor: {r: 0.26479366, g: 0.26660788, b: 0.29316428, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 689730530}
     m_Modifications:
+    - target: {fileID: 150132291, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 825585716, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
       propertyPath: cam
       value: 
@@ -137,6 +141,10 @@ PrefabInstance:
     - target: {fileID: 825585716, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
       propertyPath: delayBetweenShots
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 654212337601236389, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5142561180620660589, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
       propertyPath: m_RootOrder
@@ -185,6 +193,22 @@ PrefabInstance:
     - target: {fileID: 5482530603103143383, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482530603103143383, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104115334303568007, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458615045142419115, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150626365605522049, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
@@ -485,7 +509,7 @@ GameObject:
   - component: {fileID: 689730530}
   - component: {fileID: 689730532}
   - component: {fileID: 689730531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WeaponHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}

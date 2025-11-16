@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         if (rat != null)
         {
             playerHealth--;
+            Destroy(rat.gameObject);
             Debug.Log("Player hit by Rat. Player Health: " + playerHealth);
         }
     }
