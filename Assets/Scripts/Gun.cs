@@ -13,6 +13,8 @@ public class Gun : MonoBehaviour
 
     [SerializeField]
     private CatProjectile projectilePrefab;
+    public float delayBetweenShots = 1;
+    public float nextShotTime;
 
     //public int overallAmmo;
 
@@ -31,14 +33,18 @@ public class Gun : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            if (Time.time - nextShotTime >= delayBetweenShots)
+            {
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             
-            var position = Spawn.position;
-            var rotation = Spawn.rotation;
-            var projectile = Instantiate(projectilePrefab, position, rotation);
-            Vector3 shootDir = ray.direction.normalized;
+                var position = Spawn.position;
+                var rotation = Spawn.rotation;
+                var projectile = Instantiate(projectilePrefab, position, rotation);
+                Vector3 shootDir = ray.direction.normalized;
 
-            projectile.Shoot(velocity, shootDir);
+                projectile.Shoot(velocity, shootDir);
+                nextShotTime = Time.time;
+            }
         }
     }
 

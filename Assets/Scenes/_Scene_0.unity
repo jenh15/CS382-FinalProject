@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 2076065858}
+    - target: {fileID: 825585716, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
+      propertyPath: delayBetweenShots
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5142561180620660589, guid: f74999c1a6404c547bef00b8074c81fa, type: 3}
       propertyPath: m_RootOrder
       value: 0
