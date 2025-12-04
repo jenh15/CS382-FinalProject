@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float playerHealth;
     [SerializeField] public float startingHealth = 10f;
     [SerializeField] private GameManager gameManager;
+    [SerializeField] public GameObject[] heartIcons;
 
     void Start()
     {
@@ -32,6 +33,11 @@ public class Player : MonoBehaviour
             playerHealth--;
             Destroy(rat.gameObject);
             Debug.Log("Player hit by Rat. Player Health: " + playerHealth);
+
+            for (int i = 0; i < heartIcons.Length; i++)
+            {
+                heartIcons[i].SetActive(i < playerHealth);
+            }
         }
     }
 }
