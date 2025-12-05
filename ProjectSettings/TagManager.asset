@@ -15,9 +15,9 @@ TagManager:
   - Water
   - UI
   - CatProjectile
-  - Gun
-  - Rat
   - Ground
+  - Rat
+  - Gun
   - Player
   - 
   - 
