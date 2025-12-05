@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rat : MonoBehaviour
 {
     public bool isAlive = true;
+    public bool isPlaying = false;
     [SerializeField]
     private float health = 5f;
     private AudioSource ratHitSound;
@@ -14,6 +15,7 @@ public class Rat : MonoBehaviour
 
     void Start()
     {
+        // Get AudioSources
         AudioSource[] audios = GetComponents<AudioSource>();
         ratHitSound = audios[0];
         ratDeathSound = audios[1];
@@ -55,21 +57,25 @@ public class Rat : MonoBehaviour
         if (projectile != null)
         {
             Debug.Log("Rat hit by CatProjectile" + coll.collider.name);
-            health--;
+            health--;   // Deplete rat health if hit
 
-            /* if (health > 0)
+            if (health > 0 && isPlaying == false)
             {
-                ratHitSound.Play();
-            } */
+                isPlaying = true;   // Stops sound from repeating
+                ratHitSound.Play(); // Play sound if rat is hit
+            } 
+
+            isPlaying = false;
 
             if (health <= 0)
             {
                 isAlive = false;
+                GetComponent<Rigidbody>().isKinematic = true;
 
-                ratDeathSound.Play();
-                transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -90);
+                ratDeathSound.Play();   // Play rat death sound
+                transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -90); // Rat turns over
 
-                Destroy(gameObject, 3);
+                Destroy(gameObject, 3); // Delay destruction so sound can play
             }
         }
     }
