@@ -24,9 +24,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter (Collision coll)
+    private void OnTriggerEnter (Collider other)
     {
-        Rat rat = coll.gameObject.GetComponent<Rat>();
+        Rat rat = other.gameObject.GetComponent<Rat>();
 
         if (rat != null)
         {

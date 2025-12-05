@@ -50,16 +50,16 @@ public class Rat : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter (Collision coll)
+    private void OnTriggerEnter (Collider other)
     {
         Renderer rend = GetComponentInChildren<Renderer>();
         if (!isAlive) return;   // Does not run the code if the rat is already dead
 
-        CatProjectile projectile = coll.gameObject.GetComponent<CatProjectile>();
+        CatProjectile projectile = other.gameObject.GetComponent<CatProjectile>();
 
         if (projectile != null)
         {
-            Debug.Log("Rat hit by CatProjectile" + coll.collider.name);
+            Debug.Log("Rat hit by CatProjectile" + other.name);
             health--;   // Deplete rat health if hit
             flashEffect.Flash();
 
