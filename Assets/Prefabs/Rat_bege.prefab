@@ -521,5 +521,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   isPlaying: 0
-  health: 5
   moveSpeed: 1
+  health: 5
+  flashEffect: {fileID: 0}
+--- !u!114 &4818669209868340801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814737995809030036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c552eb0a379c0e43957a3696fa849d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d278b8560fdbbd449b66a431ffe96219, type: 2}
+  duration: 0.125

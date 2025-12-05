@@ -6,12 +6,13 @@ public class Rat : MonoBehaviour
 {
     public bool isAlive = true;
     public bool isPlaying = false;
+    public float moveSpeed = 3f;
     [SerializeField]
     private float health = 5f;
     private AudioSource ratHitSound;
     private AudioSource ratDeathSound;
-    public float moveSpeed = 3f;
     private Transform target;
+    [SerializeField] private SimpleFlash flashEffect;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Rat : MonoBehaviour
 
         // Find the player's camera (the target)
         target = Camera.main.transform;
+        flashEffect = GetComponent<SimpleFlash>();
     }
 
     void Update()
@@ -50,6 +52,7 @@ public class Rat : MonoBehaviour
 
     private void OnCollisionEnter (Collision coll)
     {
+        Renderer rend = GetComponentInChildren<Renderer>();
         if (!isAlive) return;   // Does not run the code if the rat is already dead
 
         CatProjectile projectile = coll.gameObject.GetComponent<CatProjectile>();
@@ -58,6 +61,7 @@ public class Rat : MonoBehaviour
         {
             Debug.Log("Rat hit by CatProjectile" + coll.collider.name);
             health--;   // Deplete rat health if hit
+            flashEffect.Flash();
 
             if (health > 0 && isPlaying == false)
             {
