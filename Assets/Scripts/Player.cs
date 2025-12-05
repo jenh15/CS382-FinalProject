@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float playerHealth;
-    [SerializeField] public float startingHealth = 10f;
+    [SerializeField] public float startingHealth = 3f;
     [SerializeField] private GameManager gameManager;
     [SerializeField] public GameObject[] heartIcons;
 
