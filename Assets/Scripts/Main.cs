@@ -13,13 +13,19 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Remove GameOver panel
         S.gameManager.gameOverUI.SetActive(false);
         S.gameManager.gameOver = false;
 
         for (int i = 0; i < heartIcons.Length; i++)
         {
-            heartIcons[i].SetActive(true);
+            heartIcons[i].SetActive(true);  // Health hearts are shown
         }
+    }
+
+    void Update()
+    {
+        
     }
 
     void Awake()
