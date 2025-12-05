@@ -23,11 +23,6 @@ public class Main : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        
-    }
-
     void Awake()
     {
         S = this;

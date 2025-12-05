@@ -15,13 +15,12 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         int ndx = Random.Range(0, enemyPrefab.Length);
-        GameObject go = Instantiate<GameObject>(enemyPrefab[ndx]);
+        //GameObject go = Instantiate<GameObject>(enemyPrefab[ndx]);
 
         spawnRange = new Vector3 (13, -10, Random.Range(-4, 4));
 
         // Spawn enemy at the spawner's position, with default rotation
-        Instantiate(go, spawnRange, Quaternion.identity);
+        Instantiate(enemyPrefab[ndx], spawnRange, Quaternion.identity);
     }
 }
 
-// 13, -10, (-6 to 6)
