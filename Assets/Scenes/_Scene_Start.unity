@@ -252,8 +252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 270}
-  m_SizeDelta: {x: 721.406, y: 67.6816}
+  m_AnchoredPosition: {x: 0, y: 205}
+  m_SizeDelta: {x: 811.2012, y: 104.7492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &441884472
 MonoBehaviour:
@@ -302,8 +302,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 82
+  m_fontSizeBase: 82
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 1912184143}
   - component: {fileID: 1912184146}
   m_Layer: 5
-  m_Name: Start
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,8 +915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 142}
-  m_SizeDelta: {x: 138.2388, y: 79.0838}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 123.5481, y: 70.9764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1912184143
 MonoBehaviour:
