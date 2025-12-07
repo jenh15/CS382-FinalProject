@@ -1485,6 +1485,10 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8814737995809030036, guid: 40064ac4cbbc44540b0eab1fa32fbd52, type: 3}
   - {fileID: 8448673006978476696, guid: 1cd17cfc32b0ddc47b0814cded7d8347, type: 3}
+  - {fileID: 8448673006978476696, guid: 1cd17cfc32b0ddc47b0814cded7d8347, type: 3}
+  - {fileID: 8448673006978476696, guid: 1cd17cfc32b0ddc47b0814cded7d8347, type: 3}
+  - {fileID: 8652523273927312926, guid: 6f4bf1f80f7e0ba4f9148883c09e41bb, type: 3}
+  - {fileID: 8652523273927312926, guid: 6f4bf1f80f7e0ba4f9148883c09e41bb, type: 3}
   - {fileID: 8652523273927312926, guid: 6f4bf1f80f7e0ba4f9148883c09e41bb, type: 3}
   spawnInterval: 2
   spawnRange: {x: 13, y: -10, z: 0}

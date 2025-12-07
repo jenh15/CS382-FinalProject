@@ -521,7 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isAlive: 1
   isPlaying: 0
-  moveSpeed: 3
+  moveSpeed: 5
   health: 2
   flashEffect: {fileID: 0}
 --- !u!114 &-427987794498145464

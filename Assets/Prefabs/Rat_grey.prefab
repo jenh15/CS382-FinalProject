@@ -522,7 +522,7 @@ MonoBehaviour:
   isAlive: 1
   isPlaying: 0
   moveSpeed: 2
-  health: 2
+  health: 3
   flashEffect: {fileID: 0}
 --- !u!114 &7042143269959266415
 MonoBehaviour:
